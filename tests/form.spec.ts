@@ -66,6 +66,29 @@ test('configured form sends consent choices and confirms actual receipt',async (
   expect(payload).toEqual({name:'Test Reader',email:'reader@example.test',story:'O poveste de verificare.',illustration:true,publicationConsent:false});
 });
 
+test('form locks submitted fields until a delayed response completes',async ({page})=>{
+  test.skip(!enabled,'Requires the separately built mocked-endpoint configuration.');
+  let release!:()=>void;
+  const pending=new Promise<void>(resolve=>{release=resolve;});
+  await page.route('https://forms.example.test/submit',async route=>{
+    await pending;
+    await route.fulfill({status:200,body:'{}'});
+  });
+  await page.goto('./');
+  await page.locator('[data-open-story]').click();
+  await page.getByLabel('Nume').fill('Test Reader');
+  await page.getByLabel('Email').fill('reader@example.test');
+  const story=page.getByRole('textbox',{name:'Trăznaia'});
+  await story.fill('Povestea trimisă.');
+  await page.getByRole('button',{name:'Trimite',exact:true}).click();
+  try {
+    for(const field of await page.locator('#story-form input, #story-form textarea').all()) await expect(field).toBeDisabled();
+  } finally { release(); }
+  await expect(page.locator('[data-form-status]')).toContainText('primit');
+  await expect(story).toHaveValue('');
+  for(const field of await page.locator('#story-form input, #story-form textarea').all()) await expect(field).toBeEnabled();
+});
+
 for(const failure of ['400','500','network']) test(`form preserves entered story on ${failure} failure`,async ({page})=>{
   test.skip(!enabled,'Requires the separately built mocked-endpoint configuration.');
   await page.route('https://forms.example.test/submit',route=>failure==='network'?route.abort('failed'):route.fulfill({status:Number(failure),body:'{}'}));
@@ -80,4 +103,5 @@ for(const failure of ['400','500','network']) test(`form preserves entered story
   await expect(page.getByRole('textbox',{name:'Trăznaia'})).toHaveValue('Povestea trebuie păstrată.');
   await expect(page.getByLabel('Puteți să afișați')).toBeChecked();
   await expect(page.getByRole('button',{name:'Trimite',exact:true})).toBeEnabled();
+  await expect(page.getByRole('textbox',{name:'Trăznaia'})).toBeEnabled();
 });

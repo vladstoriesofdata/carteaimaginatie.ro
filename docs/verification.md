@@ -5,17 +5,17 @@ Date: 2026-10-02. Branch: `astro-rebuild`.
 ## Results
 
 - Static Astro build succeeds and emits four pages, robots.txt, sitemap, bundled client scripts, and local assets.
-- Root build without a form service: 9 browser tests passed; 5 endpoint-specific tests skipped because the service is absent.
+- Root build without a form service: 9 browser tests passed; 6 endpoint-specific tests skipped because the service is absent.
 - Root build with mocked form service: 6 form tests passed; the default-unavailable test skipped.
 - GitHub Pages repository base `/carteaimaginatie.ro/`: build and local-resource scanner passed; 9 browser tests passed without a service.
-- Repository base with mocked form service: 13 browser tests passed; the default-unavailable test skipped.
+- Repository base with mocked form service: 14 browser tests passed; the default-unavailable test skipped.
 - Future custom-domain root `https://carteaimaginatie.ro`: build, scanner and 9 browser tests passed. Metadata for the new hosting origin is allowed; remote resources remain forbidden.
 - Build scanner fixtures: 6 passed, including local resources, remote image/font rejection, base paths, runtime references and custom-domain metadata.
 - All 34 original gallery illustrations decode locally; all three categories and document pages were checked at 375px, 768px and 1440px without horizontal overflow or external resource requests.
 - Form checks cover focus restoration, Escape, close button, unavailable sending, required values, email validity, payload and consent choices, successful response, 400/500 responses, and network failure.
 - Local commits contain the source, lockfile, original assets, reference provenance, tests, and GitHub Pages workflows. No remote push or deployment has been performed.
 
-Configuration-specific skips are paired with a separate build that runs those cases. There are 14 browser test cases and 6 build-scanner fixture cases. Platform color-environment warnings do not indicate test failures.
+Configuration-specific skips are paired with a separate build that runs those cases. There are 15 browser test cases and 6 build-scanner fixture cases. Platform color-environment warnings do not indicate test failures.
 
 ## Visual comparison
 
@@ -39,4 +39,5 @@ The GitHub workflows are prepared but cannot be verified on GitHub until pushed.
 
 Sending remains disabled until an independent HTTPS form service is configured. Review the preserved 12 EUR illustration price and the original privacy text before enabling that service. No live form submissions were made during development.
 
-Independent whole-branch review is the final remaining check.
+Independent whole-branch review found one important form data-loss issue and no critical or minor findings. A delayed-response regression reproduced the issue before the fix. Editable fields now remain disabled until submission completes, preventing unsent edits from being reset. The regression and full configured repository-base suite passed (14 tests); the default root suite passed (9 tests), and all six scanner fixtures passed. No review findings remain unresolved.
+

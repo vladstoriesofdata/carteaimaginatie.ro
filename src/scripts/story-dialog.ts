@@ -12,6 +12,7 @@ if (dialog && form && trigger) {
   });
   const submit = form.querySelector<HTMLButtonElement>('[type="submit"]')!;
   const status = form.querySelector<HTMLElement>('[data-form-status]')!;
+  const fields = Array.from(form.querySelectorAll<HTMLInputElement | HTMLTextAreaElement>('input, textarea'));
   let sending = false;
   form.addEventListener('submit', async event => {
     event.preventDefault();
@@ -26,6 +27,7 @@ if (dialog && form && trigger) {
     }
     sending = true;
     submit.disabled = true;
+    fields.forEach(field => { field.disabled = true; });
     status.textContent = 'Se trimite…';
     try {
       const response = await fetch(endpoint, {
@@ -42,6 +44,7 @@ if (dialog && form && trigger) {
     } finally {
       sending = false;
       submit.disabled = false;
+      fields.forEach(field => { field.disabled = false; });
     }
   });
 }

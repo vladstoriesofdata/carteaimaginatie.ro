@@ -63,9 +63,9 @@
 
 **Interfaces:** Produces a manifest with records `{ category, title, sourceUrl, localPath, width, height, order }`, and verified visual observations consumed by Tasks 2–4.
 
-- [ ] Inspect the original at desktop and mobile widths using the browser. Record gallery width, columns, spacing, fixed controls, selected-tab styling, image-click behavior, and popup dimensions. Switch all three categories; open the submission dialog without sending data. Inspect About and privacy pages.
-- [ ] Use the saved HTML to collect gallery items and asset URLs in source order. Capture the required page-specific styles and locally used font files, including document pages. Keep original URLs in the reference manifest.
-- [ ] Implement a repeatable capture script with an explicit origin allowlist and checked HTTP responses. Never execute captured scripts:
+- [x] Inspect the original at desktop and mobile widths using the browser. Record gallery width, columns, spacing, fixed controls, selected-tab styling, image-click behavior, and popup dimensions. Switch all three categories; open the submission dialog without sending data. Inspect About and privacy pages.
+- [x] Use the saved HTML to collect gallery items and asset URLs in source order. Capture the required page-specific styles and locally used font files, including document pages. Keep original URLs in the reference manifest.
+- [x] Implement a repeatable capture script with an explicit origin allowlist and checked HTTP responses. Never execute captured scripts:
 
 ```js
 async function download(url, destination) {
@@ -76,9 +76,9 @@ async function download(url, destination) {
 }
 ```
 
-- [ ] Download the 34 gallery images, required document images, and fonts. Record image dimensions using a trusted image-metadata package if Node cannot read the format directly. Check each downloaded file is the expected media type rather than an HTML error response.
-- [ ] Verify category counts are 25/8/1 and compare captions/order to saved HTML. Update the analysis with confirmed image-click behavior and desktop/mobile observations.
-- [ ] Save this independently reviewable reference capture as a local commit.
+- [x] Download the 34 gallery images, required document images, and fonts. Record image dimensions using a trusted image-metadata package if Node cannot read the format directly. Check each downloaded file is the expected media type rather than an HTML error response.
+- [x] Verify category counts are 25/8/1 and compare captions/order to saved HTML. Update the analysis with confirmed image-click behavior and desktop/mobile observations.
+- [x] Save this independently reviewable reference capture as a local commit.
 
 ### Task 2: Establish a static Astro site with local assets
 
@@ -86,9 +86,9 @@ async function download(url, destination) {
 
 **Interfaces:** `sitePath(path: string): string`; `Category = 'calatoria' | 'din-carte' | 'prieteni'`; `GalleryImage = { category: Category; title: string; src: string; width: number; height: number; order: number }`; exported `galleryImages: GalleryImage[]` and `categories: { id: Category; label: string }[]`.
 
-- [ ] Confirm current official Astro setup guidance and package versions. Install Astro, sitemap support, TypeScript, and Playwright with a committed npm lockfile. Set Node 22 or later as the supported runtime.
-- [ ] Configure static output, trailing slashes, site URL and base path from `PUBLIC_SITE_URL` and `PUBLIC_BASE_PATH`. Define scripts for `dev`, `build`, `preview`, and `test:e2e`.
-- [ ] Add an initial failing smoke test and run it against the empty implementation:
+- [x] Confirm current official Astro setup guidance and package versions. Install Astro, sitemap support, TypeScript, and Playwright with a committed npm lockfile. Set Node 22 or later as the supported runtime.
+- [x] Configure static output, trailing slashes, site URL and base path from `PUBLIC_SITE_URL` and `PUBLIC_BASE_PATH`. Define scripts for `dev`, `build`, `preview`, and `test:e2e`.
+- [x] Add an initial failing smoke test and run it against the empty implementation:
 
 ```ts
 test('home has local content and Romanian metadata', async ({ page }) => {
@@ -99,11 +99,11 @@ test('home has local content and Romanian metadata', async ({ page }) => {
 });
 ```
 
-- [ ] Implement `sitePath` using `import.meta.env.BASE_URL`, normalizing the separator once. All production asset paths and internal links call this helper. Original source URLs remain out of `src/data/gallery.ts`.
-- [ ] Build the shared layout with local font declarations, title, description, canonical URL, favicon, `lang="ro"`, viewport metadata, and a slot. Derive canonical URLs from the configured public URL and base.
-- [ ] Generate the typed gallery data from the verified capture, preserving order. Add explicit image dimensions and useful descriptions; first visible image is eager and later images lazy.
-- [ ] Run the smoke test, build, and local asset-loading check. Confirm no font stylesheet is loaded from Google or the original site.
-- [ ] Commit the static foundation and local production assets.
+- [x] Implement `sitePath` using `import.meta.env.BASE_URL`, normalizing the separator once. All production asset paths and internal links call this helper. Original source URLs remain out of `src/data/gallery.ts`.
+- [x] Build the shared layout with local font declarations, title, description, canonical URL, favicon, `lang="ro"`, viewport metadata, and a slot. Derive canonical URLs from the configured public URL and base.
+- [x] Generate the typed gallery data from the verified capture, preserving order. Add explicit image dimensions and useful descriptions; first visible image is eager and later images lazy.
+- [x] Run the smoke test, build, and local asset-loading check. Confirm no font stylesheet is loaded from Google or the original site.
+- [x] Commit the static foundation and local production assets.
 
 ### Task 3: Recreate gallery presentation and document routes
 
@@ -111,7 +111,7 @@ test('home has local content and Romanian metadata', async ({ page }) => {
 
 **Interfaces:** Gallery buttons have `data-filter` and `aria-pressed`; each gallery item has `data-category`. Category selection shows one group, updates pressed state, and resets gallery scroll appropriately to the original behavior. Floating submission action exposes `data-open-story` for Task 4.
 
-- [ ] Add a failing category test:
+- [x] Add a failing category test:
 
 ```ts
 test('gallery switches category without mixing images', async ({ page }) => {
@@ -124,12 +124,12 @@ test('gallery switches category without mixing images', async ({ page }) => {
 });
 ```
 
-- [ ] Run the test and confirm the missing switching behavior fails. Implement native buttons and minimal filtering script that toggles `hidden` and `aria-pressed`. Maintain useful initial HTML before JavaScript loads.
-- [ ] Recreate the observed reference gallery sizing, active tabs, captions, fixed amber controls, and About navigation with scoped CSS. Use local SVG icons. Implement a lightbox only if confirmed in Task 1; otherwise images remain plain images.
-- [ ] Recreate About and privacy pages using captured text and local supporting images. Keep the author and illustrator credit links. Document obsolete privacy passages separately instead of silently rewriting them.
-- [ ] Add a small 404 page and robots endpoint pointing to the generated sitemap.
-- [ ] Test category state, Enter/Space activation, About/home/privacy links, and 404 rendering. Compare local and reference screenshots at desktop and mobile widths.
-- [ ] Commit the public pages and gallery interactions.
+- [x] Run the test and confirm the missing switching behavior fails. Implement native buttons and minimal filtering script that toggles `hidden` and `aria-pressed`. Maintain useful initial HTML before JavaScript loads.
+- [x] Recreate the observed reference gallery sizing, active tabs, captions, fixed amber controls, and About navigation with scoped CSS. Use local SVG icons. Implement a lightbox only if confirmed in Task 1; otherwise images remain plain images.
+- [x] Recreate About and privacy pages using captured text and local supporting images. Keep the author and illustrator credit links. Document obsolete privacy passages separately instead of silently rewriting them.
+- [x] Add a small 404 page and robots endpoint pointing to the generated sitemap.
+- [x] Test category state, Enter/Space activation, About/home/privacy links, and 404 rendering. Compare local and reference screenshots at desktop and mobile widths.
+- [x] Commit the public pages and gallery interactions.
 
 ### Task 4: Recreate the story dialog with honest submission behavior
 
@@ -137,7 +137,7 @@ test('gallery switches category without mixing images', async ({ page }) => {
 
 **Interfaces:** Native `dialog#story-dialog`; trigger `[data-open-story]`; form fields named `name`, `email`, `story`, `illustration`, `publicationConsent`; optional HTTPS endpoint stored as `data-endpoint`. Payload is JSON `{ name, email, story, illustration: boolean, publicationConsent: boolean }`. HTTP 2xx confirms receipt; other statuses or network failures produce an error.
 
-- [ ] Add failing tests for open/close, required-field validation, unavailable sending, error retention, and success. Example keyboard test:
+- [x] Add failing tests for open/close, required-field validation, unavailable sending, error retention, and success. Example keyboard test:
 
 ```ts
 test('dialog dismisses with Escape and restores focus', async ({ page }) => {
@@ -151,12 +151,12 @@ test('dialog dismisses with Escape and restores focus', async ({ page }) => {
 });
 ```
 
-- [ ] Render original fields, explanatory copy, illustration-price wording, privacy link, and consent choices in a native dialog. Use `showModal()` and native focus management; restore trigger focus after close. Provide a labeled close button and visible focus styling.
-- [ ] Without a configured endpoint, disable sending and show the Romanian explanation that submission is unavailable. Ensure the form cannot fall back to a GET request containing personal data.
-- [ ] With a valid HTTPS endpoint, prevent default submission, run native validation, disable duplicate submissions while pending, and post the documented JSON payload. Invalid endpoint configuration also leaves sending unavailable.
-- [ ] On failure, show an accessible error and preserve all field values. On success, display confirmed receipt; never use unconditional success or local storage. Reenable controls after completion.
-- [ ] Run tests against two builds: default endpoint absent, and `PUBLIC_FORM_ENDPOINT=https://forms.example.test/submit`. Mock the latter with Playwright route interception for 2xx, 4xx, 5xx and connection failure; never contact a real form service.
-- [ ] Commit the dialog, submission behavior, and tests.
+- [x] Render original fields, explanatory copy, illustration-price wording, privacy link, and consent choices in a native dialog. Use `showModal()` and native focus management; restore trigger focus after close. Provide a labeled close button and visible focus styling.
+- [x] Without a configured endpoint, disable sending and show the Romanian explanation that submission is unavailable. Ensure the form cannot fall back to a GET request containing personal data.
+- [x] With a valid HTTPS endpoint, prevent default submission, run native validation, disable duplicate submissions while pending, and post the documented JSON payload. Invalid endpoint configuration also leaves sending unavailable.
+- [x] On failure, show an accessible error and preserve all field values. On success, display confirmed receipt; never use unconditional success or local storage. Reenable controls after completion.
+- [x] Run tests against two builds: default endpoint absent, and `PUBLIC_FORM_ENDPOINT=https://forms.example.test/submit`. Mock the latter with Playwright route interception for 2xx, 4xx, 5xx and connection failure; never contact a real form service.
+- [x] Commit the dialog, submission behavior, and tests.
 
 ### Task 5: Prepare and verify GitHub Pages builds
 
@@ -164,13 +164,13 @@ test('dialog dismisses with Escape and restores focus', async ({ page }) => {
 
 **Interfaces:** `PUBLIC_SITE_URL=https://vladstoriesofdata.github.io`; `PUBLIC_BASE_PATH=/carteaimaginatie.ro/` for repository Pages. Root custom-domain builds use the selected custom origin and `/`. No CNAME is generated by default.
 
-- [ ] Add a deployment test that uses a base-path-aware Playwright `baseURL`, visits each content page, checks image responses, and follows internal navigation. The first run against hardcoded root paths must fail if any remain.
-- [ ] Ensure metadata, favicon, CSS, scripts, image URLs, document links, 404 navigation, robots, and sitemap all honor the base path. Build and preview both configurations sequentially.
-- [ ] Add a build scanner checking emitted asset references and runtime code for the original origin, Google Fonts requests, WordPress plugin scripts, and `/legacy/` references. External Gumroad/credit anchors are permitted; remote resource attributes and fetch calls are not.
-- [ ] Prepare CI to run `npm ci`, install Playwright Chromium, run behavior tests and both path configurations, scan the output, and upload the verified static build artifact.
-- [ ] Prepare Pages workflow with checkout, Node setup, clean install, verified static build, `actions/upload-pages-artifact`, and `actions/deploy-pages`. Grant `contents: read`, `pages: write`, and `id-token: write`. Deployment depends on successful checks and can run manually or on a reviewed future push to main.
-- [ ] Document repository settings needed to use GitHub Actions for Pages. Keep live deployment, custom-domain settings, DNS, and pushing separate from this local rebuild.
-- [ ] Commit deployment preparation and path verification.
+- [x] Add a deployment test that uses a base-path-aware Playwright `baseURL`, visits each content page, checks image responses, and follows internal navigation. The first run against hardcoded root paths must fail if any remain.
+- [x] Ensure metadata, favicon, CSS, scripts, image URLs, document links, 404 navigation, robots, and sitemap all honor the base path. Build and preview both configurations sequentially.
+- [x] Add a build scanner checking emitted asset references and runtime code for the original origin, Google Fonts requests, WordPress plugin scripts, and `/legacy/` references. External Gumroad/credit anchors are permitted; remote resource attributes and fetch calls are not.
+- [x] Prepare CI to run `npm ci`, install Playwright Chromium, run behavior tests and both path configurations, scan the output, and upload the verified static build artifact.
+- [x] Prepare Pages workflow with checkout, Node setup, clean install, verified static build, `actions/upload-pages-artifact`, and `actions/deploy-pages`. Grant `contents: read`, `pages: write`, and `id-token: write`. Deployment depends on successful checks and can run manually or on a reviewed future push to main.
+- [x] Document repository settings needed to use GitHub Actions for Pages. Keep live deployment, custom-domain settings, DNS, and pushing separate from this local rebuild.
+- [x] Commit deployment preparation and path verification.
 
 ### Task 6: Verify visual fidelity and complete the local handoff
 
@@ -178,8 +178,8 @@ test('dialog dismisses with Escape and restores focus', async ({ page }) => {
 
 **Interfaces:** Verification report records the tested routes, viewport dimensions, build configurations, command outcomes, visual differences, and form-service limitation.
 
-- [ ] Track browser network requests while opening all content routes, all categories and the dialog. Confirm same-origin resources only; external anchors do not load until clicked. Include CSS/font/background resources in this check.
-- [ ] Confirm all 34 images decode and natural dimensions are nonzero. Verify first-paint dimensions and no horizontal overflow at 375px, 768px, and 1440px widths:
+- [x] Track browser network requests while opening all content routes, all categories and the dialog. Confirm same-origin resources only; external anchors do not load until clicked. Include CSS/font/background resources in this check.
+- [x] Confirm all 34 images decode and natural dimensions are nonzero. Verify first-paint dimensions and no horizontal overflow at 375px, 768px, and 1440px widths:
 
 ```ts
 expect(await page.evaluate(() =>
@@ -187,11 +187,11 @@ expect(await page.evaluate(() =>
 )).toBe(true);
 ```
 
-- [ ] Compare homepage, all categories, popup, About, and privacy views side by side with the captured reference. Fix observed differences, retaining accessibility and honest form behavior. Record any intentional differences.
-- [ ] Run the complete interaction suite, default and configured-endpoint tests, both static builds, and build scanner. Review fresh output rather than assuming earlier checks still pass.
-- [ ] Finish README commands, environment configuration, Pages instructions, and the form payload contract. Record any illustration-price/privacy content awaiting publication review.
-- [ ] Review the full diff against the approved specification. For native execution, request one independent final code review under the executing-plans workflow; resolve actionable findings and rerun affected checks.
-- [ ] Commit the verified local rebuild. Start and show a working local preview, report test/build results and remaining form-service limitations, and provide the repository handoff without changing the live reference site.
+- [x] Compare homepage, all categories, popup, About, and privacy views side by side with the captured reference. Fix observed differences, retaining accessibility and honest form behavior. Record any intentional differences.
+- [x] Run the complete interaction suite, default and configured-endpoint tests, both static builds, and build scanner. Review fresh output rather than assuming earlier checks still pass.
+- [x] Finish README commands, environment configuration, Pages instructions, and the form payload contract. Record any illustration-price/privacy content awaiting publication review.
+- [x] Review the full diff against the approved specification. For native execution, request one independent final code review under the executing-plans workflow; resolve actionable findings and rerun affected checks.
+- [x] Commit the verified local rebuild. Start and show a working local preview, report test/build results and remaining form-service limitations, and provide the repository handoff without changing the live reference site.
 
 ## Plan Self-Review
 
@@ -207,3 +207,4 @@ expect(await page.evaluate(() =>
 ## Execution Handoff
 
 Recommended: native execution in this session. The tasks share one small static-site architecture, so keeping implementation in one context avoids unnecessary interface handoffs. Await user review of this plan and selection of native or subagent-driven execution before writing product code.
+
