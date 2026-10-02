@@ -1,0 +1,353 @@
+{
+  "captured": "2026-10-02",
+  "records": [
+    {
+      "category": "din-carte",
+      "title": "Tata",
+      "sourceUrl": "https://carteaimaginatie.ro/wp-content/uploads/2019/01/1.jpg",
+      "localPath": "images/din-carte/1.jpg",
+      "width": 960,
+      "height": 960,
+      "order": 0
+    },
+    {
+      "category": "din-carte",
+      "title": "Mama",
+      "sourceUrl": "https://carteaimaginatie.ro/wp-content/uploads/2019/01/3.jpg",
+      "localPath": "images/din-carte/3.jpg",
+      "width": 960,
+      "height": 960,
+      "order": 1
+    },
+    {
+      "category": "din-carte",
+      "title": "Vlad",
+      "sourceUrl": "https://carteaimaginatie.ro/wp-content/uploads/2019/01/2.jpg",
+      "localPath": "images/din-carte/2.jpg",
+      "width": 960,
+      "height": 960,
+      "order": 2
+    },
+    {
+      "category": "din-carte",
+      "title": "Diana",
+      "sourceUrl": "https://carteaimaginatie.ro/wp-content/uploads/2019/01/6.jpg",
+      "localPath": "images/din-carte/6.jpg",
+      "width": 960,
+      "height": 960,
+      "order": 3
+    },
+    {
+      "category": "din-carte",
+      "title": "Ana",
+      "sourceUrl": "https://carteaimaginatie.ro/wp-content/uploads/2019/01/4.jpg",
+      "localPath": "images/din-carte/4.jpg",
+      "width": 960,
+      "height": 960,
+      "order": 4
+    },
+    {
+      "category": "din-carte",
+      "title": "Radu",
+      "sourceUrl": "https://carteaimaginatie.ro/wp-content/uploads/2019/01/5.jpg",
+      "localPath": "images/din-carte/5.jpg",
+      "width": 960,
+      "height": 960,
+      "order": 5
+    },
+    {
+      "category": "din-carte",
+      "title": "Emotiile",
+      "sourceUrl": "https://carteaimaginatie.ro/wp-content/uploads/2021/12/Nati-carte-scris-14.jpg",
+      "localPath": "images/din-carte/Nati-carte-scris-14.jpg",
+      "width": 877,
+      "height": 620,
+      "order": 6
+    },
+    {
+      "category": "din-carte",
+      "title": "Vocea",
+      "sourceUrl": "https://carteaimaginatie.ro/wp-content/uploads/2021/12/Nati-carte-scris-pahar.jpg",
+      "localPath": "images/din-carte/Nati-carte-scris-pahar.jpg",
+      "width": 877,
+      "height": 620,
+      "order": 7
+    },
+    {
+      "category": "calatoria",
+      "title": "Cititor",
+      "sourceUrl": "https://carteaimaginatie.ro/wp-content/uploads/2022/02/1-cititor.jpg",
+      "localPath": "images/calatoria/1-cititor.jpg",
+      "width": 876,
+      "height": 623,
+      "order": 0
+    },
+    {
+      "category": "calatoria",
+      "title": "Visul",
+      "sourceUrl": "https://carteaimaginatie.ro/wp-content/uploads/2022/02/2-visat.jpg",
+      "localPath": "images/calatoria/2-visat.jpg",
+      "width": 876,
+      "height": 622,
+      "order": 1
+    },
+    {
+      "category": "calatoria",
+      "title": "Vantul",
+      "sourceUrl": "https://carteaimaginatie.ro/wp-content/uploads/2022/02/3-vant.jpg",
+      "localPath": "images/calatoria/3-vant.jpg",
+      "width": 876,
+      "height": 623,
+      "order": 2
+    },
+    {
+      "category": "calatoria",
+      "title": "Pe geam",
+      "sourceUrl": "https://carteaimaginatie.ro/wp-content/uploads/2022/02/4-geam.jpg",
+      "localPath": "images/calatoria/4-geam.jpg",
+      "width": 876,
+      "height": 623,
+      "order": 3
+    },
+    {
+      "category": "calatoria",
+      "title": "Pe topogan",
+      "sourceUrl": "https://carteaimaginatie.ro/wp-content/uploads/2022/02/5-topogan.jpg",
+      "localPath": "images/calatoria/5-topogan.jpg",
+      "width": 876,
+      "height": 622,
+      "order": 4
+    },
+    {
+      "category": "calatoria",
+      "title": "Campia",
+      "sourceUrl": "https://carteaimaginatie.ro/wp-content/uploads/2022/02/6-campie.jpg",
+      "localPath": "images/calatoria/6-campie.jpg",
+      "width": 1752,
+      "height": 1246,
+      "order": 5
+    },
+    {
+      "category": "calatoria",
+      "title": "Dealul",
+      "sourceUrl": "https://carteaimaginatie.ro/wp-content/uploads/2022/02/7-deal.jpg",
+      "localPath": "images/calatoria/7-deal.jpg",
+      "width": 1752,
+      "height": 1246,
+      "order": 6
+    },
+    {
+      "category": "calatoria",
+      "title": "Catelul",
+      "sourceUrl": "https://carteaimaginatie.ro/wp-content/uploads/2022/02/8-catel.jpg",
+      "localPath": "images/calatoria/8-catel.jpg",
+      "width": 1752,
+      "height": 1246,
+      "order": 7
+    },
+    {
+      "category": "calatoria",
+      "title": "Baloanele",
+      "sourceUrl": "https://carteaimaginatie.ro/wp-content/uploads/2022/02/9-baloane.jpg",
+      "localPath": "images/calatoria/9-baloane.jpg",
+      "width": 1752,
+      "height": 1246,
+      "order": 8
+    },
+    {
+      "category": "calatoria",
+      "title": "Dealurile",
+      "sourceUrl": "https://carteaimaginatie.ro/wp-content/uploads/2022/02/10-dealuri.jpg",
+      "localPath": "images/calatoria/10-dealuri.jpg",
+      "width": 1752,
+      "height": 1246,
+      "order": 9
+    },
+    {
+      "category": "calatoria",
+      "title": "Bezelele",
+      "sourceUrl": "https://carteaimaginatie.ro/wp-content/uploads/2022/02/11-bezele.jpg",
+      "localPath": "images/calatoria/11-bezele.jpg",
+      "width": 1752,
+      "height": 1246,
+      "order": 10
+    },
+    {
+      "category": "calatoria",
+      "title": "Baloanele cu aer cald",
+      "sourceUrl": "https://carteaimaginatie.ro/wp-content/uploads/2022/02/12-baloane-aer-cald.jpg",
+      "localPath": "images/calatoria/12-baloane-aer-cald.jpg",
+      "width": 1752,
+      "height": 1246,
+      "order": 11
+    },
+    {
+      "category": "calatoria",
+      "title": "Marginea padurii",
+      "sourceUrl": "https://carteaimaginatie.ro/wp-content/uploads/2022/02/13-marginea-padurii.jpg",
+      "localPath": "images/calatoria/13-marginea-padurii.jpg",
+      "width": 1752,
+      "height": 1246,
+      "order": 12
+    },
+    {
+      "category": "calatoria",
+      "title": "Padurea",
+      "sourceUrl": "https://carteaimaginatie.ro/wp-content/uploads/2022/02/14-padure.jpg",
+      "localPath": "images/calatoria/14-padure.jpg",
+      "width": 1752,
+      "height": 1246,
+      "order": 13
+    },
+    {
+      "category": "calatoria",
+      "title": "Paraul",
+      "sourceUrl": "https://carteaimaginatie.ro/wp-content/uploads/2022/02/15-parau.jpg",
+      "localPath": "images/calatoria/15-parau.jpg",
+      "width": 1752,
+      "height": 1246,
+      "order": 14
+    },
+    {
+      "category": "calatoria",
+      "title": "Barca",
+      "sourceUrl": "https://carteaimaginatie.ro/wp-content/uploads/2022/02/16-barca.jpg",
+      "localPath": "images/calatoria/16-barca.jpg",
+      "width": 1752,
+      "height": 1246,
+      "order": 15
+    },
+    {
+      "category": "calatoria",
+      "title": "Pestera",
+      "sourceUrl": "https://carteaimaginatie.ro/wp-content/uploads/2022/02/17-pestera.jpg",
+      "localPath": "images/calatoria/17-pestera.jpg",
+      "width": 1752,
+      "height": 1246,
+      "order": 16
+    },
+    {
+      "category": "calatoria",
+      "title": "Stelele",
+      "sourceUrl": "https://carteaimaginatie.ro/wp-content/uploads/2022/02/18-stele.jpg",
+      "localPath": "images/calatoria/18-stele.jpg",
+      "width": 1752,
+      "height": 1246,
+      "order": 17
+    },
+    {
+      "category": "calatoria",
+      "title": "Zmeele",
+      "sourceUrl": "https://carteaimaginatie.ro/wp-content/uploads/2022/02/19-zmee.jpg",
+      "localPath": "images/calatoria/19-zmee.jpg",
+      "width": 1752,
+      "height": 1246,
+      "order": 18
+    },
+    {
+      "category": "calatoria",
+      "title": "Pe varf de munte",
+      "sourceUrl": "https://carteaimaginatie.ro/wp-content/uploads/2022/02/20-varf-munte.jpg",
+      "localPath": "images/calatoria/20-varf-munte.jpg",
+      "width": 1752,
+      "height": 1246,
+      "order": 19
+    },
+    {
+      "category": "calatoria",
+      "title": "Ultima pagina",
+      "sourceUrl": "https://carteaimaginatie.ro/wp-content/uploads/2022/02/21-ultima-pagina.jpg",
+      "localPath": "images/calatoria/21-ultima-pagina.jpg",
+      "width": 1752,
+      "height": 1246,
+      "order": 20
+    },
+    {
+      "category": "calatoria",
+      "title": "Corabia",
+      "sourceUrl": "https://carteaimaginatie.ro/wp-content/uploads/2022/02/22-corabie.jpg",
+      "localPath": "images/calatoria/22-corabie.jpg",
+      "width": 1752,
+      "height": 1246,
+      "order": 21
+    },
+    {
+      "category": "calatoria",
+      "title": "Globul pamantesc",
+      "sourceUrl": "https://carteaimaginatie.ro/wp-content/uploads/2022/02/23-glob-pamantesc.jpg",
+      "localPath": "images/calatoria/23-glob-pamantesc.jpg",
+      "width": 1752,
+      "height": 1246,
+      "order": 22
+    },
+    {
+      "category": "calatoria",
+      "title": "Coperta",
+      "sourceUrl": "https://carteaimaginatie.ro/wp-content/uploads/2022/02/24-coperta.jpg",
+      "localPath": "images/calatoria/24-coperta.jpg",
+      "width": 876,
+      "height": 623,
+      "order": 23
+    },
+    {
+      "category": "calatoria",
+      "title": "Cartea gata",
+      "sourceUrl": "https://carteaimaginatie.ro/wp-content/uploads/2022/02/25-cartea-gata.jpg",
+      "localPath": "images/calatoria/25-cartea-gata.jpg",
+      "width": 1752,
+      "height": 1246,
+      "order": 24
+    },
+    {
+      "category": "prieteni",
+      "title": "Noah & Luna",
+      "sourceUrl": "https://carteaimaginatie.ro/wp-content/uploads/2022/05/NoahLuna.jpg",
+      "localPath": "images/prieteni/NoahLuna.jpg",
+      "width": 841,
+      "height": 598,
+      "order": 0
+    }
+  ],
+  "documents": {
+    "despre-proiect": {
+      "blocks": [
+        "<h2>Nati si ImagiNatie</h2>"
+      ],
+      "images": [
+        {
+          "sourceUrl": "https://carteaimaginatie.ro/wp-content/uploads/2022/02/cover-150dpi-1024x395.jpg",
+          "localPath": "images/project/cover-150dpi-1024x395.jpg",
+          "width": 1024,
+          "height": 395
+        },
+        {
+          "sourceUrl": "https://carteaimaginatie.ro/wp-content/uploads/2022/02/Nati-facebook-story-150dpi-scurt-1024x559.jpg",
+          "localPath": "images/project/Nati-facebook-story-150dpi-scurt-1024x559.jpg",
+          "width": 1024,
+          "height": 559
+        }
+      ],
+      "projectParagraphs": [
+        "Nati, protagonista cartii, este surioara mea cu 20 de ani mai mica decat mine. Cartea s-a nascut din surprinderea mea sa vad cum gandeste, simte si se exprima Nati. Pentru mine nu sunt doar niste lucruri traznite pe care le-a spus odata. Am vazut si vad prin ele caracterul surorii mele, curajul, libertatea, increderea, bucuria ce s-au format in ea in familia noastra. Pretuiesc amintirile acestea pentru ca imi amintesc de ea si de noi dar si pentru ca ii arata frumusetea si unicitatea ei.",
+        "ImagiNatie nu este doar o carte, ci si o platforma, acest website, care doreste sa adune astfel de “traznai” de la alti copii. Astfel, imi doresc sa ofer si altor parinti si frati sansa sa surprinda frumusetea si unicitatea copiilor si fratilor mai mici si sa impartaseasca, daca vor, cu comunitatea mai larga.",
+        "Proiectul nu ar fi fost posibil fara efortul si creativitatea ilustratorului, Ina Socol.",
+        "Vlad Mihanta — autorul"
+      ]
+    },
+    "politica-de-confidentialitate": {
+      "blocks": [
+        "<p><span>Politica de confidențialitate</span></p>",
+        "<p>Nu colectăm și nu folosim datele dumneavoastră sau ale copiilor dumneavoastră pentru nici o acțiune de marketing. Singurul lucru pe care îl facem cu informațiile pe care ni le furnizați este să le afișăm pe website în cazul în care sunt aprobate de evaluatori. Nu vom afișa pe website nici o informație<span>, cum ar fi nume, e-mail, poze, profiluri de pe rețele de socializare, etc,</span><span>&nbsp;care ar putea conduce la identificarea dumneavoastră, a copilului dumneavoastră sau a oricărei altă persoană care nu și-a dat acordul în prealabil pentru aceasta.</span></p>"
+      ],
+      "images": [
+        {
+          "sourceUrl": "https://carteaimaginatie.ro/wp-content/uploads/2019/01/0.jpg",
+          "localPath": "images/project/0.jpg",
+          "width": 960,
+          "height": 960
+        }
+      ],
+      "projectParagraphs": []
+    }
+  }
+}

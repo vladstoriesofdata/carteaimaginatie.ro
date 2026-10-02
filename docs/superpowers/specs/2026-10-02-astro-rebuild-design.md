@@ -1,7 +1,7 @@
 # Cartea Imaginație: standalone Astro rebuild
 
 Date: 2026-10-02
-Status: design approach approved; written specification awaiting review
+Status: approved by the user on 2026-10-02
 
 ## Goal and constraints
 

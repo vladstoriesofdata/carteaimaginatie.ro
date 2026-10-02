@@ -1,0 +1,26 @@
+[
+  {
+    "sourceUrl": "https://fonts.gstatic.com/s/librefranklin/v20/jizOREVItHgc8qDIbSTKq4XkRg8T88bjFuXOnduhLsWUBw.ttf",
+    "localPath": "fonts/font-0.ttf"
+  },
+  {
+    "sourceUrl": "https://fonts.gstatic.com/s/librefranklin/v20/jizOREVItHgc8qDIbSTKq4XkRg8T88bjFuXOnduhHMWUBw.ttf",
+    "localPath": "fonts/font-1.ttf"
+  },
+  {
+    "sourceUrl": "https://fonts.gstatic.com/s/librefranklin/v20/jizOREVItHgc8qDIbSTKq4XkRg8T88bjFuXOnduh8MKUBw.ttf",
+    "localPath": "fonts/font-2.ttf"
+  },
+  {
+    "sourceUrl": "https://fonts.gstatic.com/s/librefranklin/v20/jizOREVItHgc8qDIbSTKq4XkRg8T88bjFuXOnduhycKUBw.ttf",
+    "localPath": "fonts/font-3.ttf"
+  },
+  {
+    "sourceUrl": "https://fonts.gstatic.com/s/roboto/v51/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbWmT.ttf",
+    "localPath": "fonts/font-4.ttf"
+  },
+  {
+    "sourceUrl": "https://fonts.gstatic.com/s/roboto/v51/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWub2bWmT.ttf",
+    "localPath": "fonts/font-5.ttf"
+  }
+]

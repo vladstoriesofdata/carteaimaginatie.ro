@@ -1,0 +1,274 @@
+[
+  {
+    "category": "din-carte",
+    "title": "Tata",
+    "width": 960,
+    "height": 960,
+    "order": 0,
+    "src": "images/din-carte/1.jpg"
+  },
+  {
+    "category": "din-carte",
+    "title": "Mama",
+    "width": 960,
+    "height": 960,
+    "order": 1,
+    "src": "images/din-carte/3.jpg"
+  },
+  {
+    "category": "din-carte",
+    "title": "Vlad",
+    "width": 960,
+    "height": 960,
+    "order": 2,
+    "src": "images/din-carte/2.jpg"
+  },
+  {
+    "category": "din-carte",
+    "title": "Diana",
+    "width": 960,
+    "height": 960,
+    "order": 3,
+    "src": "images/din-carte/6.jpg"
+  },
+  {
+    "category": "din-carte",
+    "title": "Ana",
+    "width": 960,
+    "height": 960,
+    "order": 4,
+    "src": "images/din-carte/4.jpg"
+  },
+  {
+    "category": "din-carte",
+    "title": "Radu",
+    "width": 960,
+    "height": 960,
+    "order": 5,
+    "src": "images/din-carte/5.jpg"
+  },
+  {
+    "category": "din-carte",
+    "title": "Emotiile",
+    "width": 877,
+    "height": 620,
+    "order": 6,
+    "src": "images/din-carte/Nati-carte-scris-14.jpg"
+  },
+  {
+    "category": "din-carte",
+    "title": "Vocea",
+    "width": 877,
+    "height": 620,
+    "order": 7,
+    "src": "images/din-carte/Nati-carte-scris-pahar.jpg"
+  },
+  {
+    "category": "calatoria",
+    "title": "Cititor",
+    "width": 876,
+    "height": 623,
+    "order": 0,
+    "src": "images/calatoria/1-cititor.jpg"
+  },
+  {
+    "category": "calatoria",
+    "title": "Visul",
+    "width": 876,
+    "height": 622,
+    "order": 1,
+    "src": "images/calatoria/2-visat.jpg"
+  },
+  {
+    "category": "calatoria",
+    "title": "Vantul",
+    "width": 876,
+    "height": 623,
+    "order": 2,
+    "src": "images/calatoria/3-vant.jpg"
+  },
+  {
+    "category": "calatoria",
+    "title": "Pe geam",
+    "width": 876,
+    "height": 623,
+    "order": 3,
+    "src": "images/calatoria/4-geam.jpg"
+  },
+  {
+    "category": "calatoria",
+    "title": "Pe topogan",
+    "width": 876,
+    "height": 622,
+    "order": 4,
+    "src": "images/calatoria/5-topogan.jpg"
+  },
+  {
+    "category": "calatoria",
+    "title": "Campia",
+    "width": 1752,
+    "height": 1246,
+    "order": 5,
+    "src": "images/calatoria/6-campie.jpg"
+  },
+  {
+    "category": "calatoria",
+    "title": "Dealul",
+    "width": 1752,
+    "height": 1246,
+    "order": 6,
+    "src": "images/calatoria/7-deal.jpg"
+  },
+  {
+    "category": "calatoria",
+    "title": "Catelul",
+    "width": 1752,
+    "height": 1246,
+    "order": 7,
+    "src": "images/calatoria/8-catel.jpg"
+  },
+  {
+    "category": "calatoria",
+    "title": "Baloanele",
+    "width": 1752,
+    "height": 1246,
+    "order": 8,
+    "src": "images/calatoria/9-baloane.jpg"
+  },
+  {
+    "category": "calatoria",
+    "title": "Dealurile",
+    "width": 1752,
+    "height": 1246,
+    "order": 9,
+    "src": "images/calatoria/10-dealuri.jpg"
+  },
+  {
+    "category": "calatoria",
+    "title": "Bezelele",
+    "width": 1752,
+    "height": 1246,
+    "order": 10,
+    "src": "images/calatoria/11-bezele.jpg"
+  },
+  {
+    "category": "calatoria",
+    "title": "Baloanele cu aer cald",
+    "width": 1752,
+    "height": 1246,
+    "order": 11,
+    "src": "images/calatoria/12-baloane-aer-cald.jpg"
+  },
+  {
+    "category": "calatoria",
+    "title": "Marginea padurii",
+    "width": 1752,
+    "height": 1246,
+    "order": 12,
+    "src": "images/calatoria/13-marginea-padurii.jpg"
+  },
+  {
+    "category": "calatoria",
+    "title": "Padurea",
+    "width": 1752,
+    "height": 1246,
+    "order": 13,
+    "src": "images/calatoria/14-padure.jpg"
+  },
+  {
+    "category": "calatoria",
+    "title": "Paraul",
+    "width": 1752,
+    "height": 1246,
+    "order": 14,
+    "src": "images/calatoria/15-parau.jpg"
+  },
+  {
+    "category": "calatoria",
+    "title": "Barca",
+    "width": 1752,
+    "height": 1246,
+    "order": 15,
+    "src": "images/calatoria/16-barca.jpg"
+  },
+  {
+    "category": "calatoria",
+    "title": "Pestera",
+    "width": 1752,
+    "height": 1246,
+    "order": 16,
+    "src": "images/calatoria/17-pestera.jpg"
+  },
+  {
+    "category": "calatoria",
+    "title": "Stelele",
+    "width": 1752,
+    "height": 1246,
+    "order": 17,
+    "src": "images/calatoria/18-stele.jpg"
+  },
+  {
+    "category": "calatoria",
+    "title": "Zmeele",
+    "width": 1752,
+    "height": 1246,
+    "order": 18,
+    "src": "images/calatoria/19-zmee.jpg"
+  },
+  {
+    "category": "calatoria",
+    "title": "Pe varf de munte",
+    "width": 1752,
+    "height": 1246,
+    "order": 19,
+    "src": "images/calatoria/20-varf-munte.jpg"
+  },
+  {
+    "category": "calatoria",
+    "title": "Ultima pagina",
+    "width": 1752,
+    "height": 1246,
+    "order": 20,
+    "src": "images/calatoria/21-ultima-pagina.jpg"
+  },
+  {
+    "category": "calatoria",
+    "title": "Corabia",
+    "width": 1752,
+    "height": 1246,
+    "order": 21,
+    "src": "images/calatoria/22-corabie.jpg"
+  },
+  {
+    "category": "calatoria",
+    "title": "Globul pamantesc",
+    "width": 1752,
+    "height": 1246,
+    "order": 22,
+    "src": "images/calatoria/23-glob-pamantesc.jpg"
+  },
+  {
+    "category": "calatoria",
+    "title": "Coperta",
+    "width": 876,
+    "height": 623,
+    "order": 23,
+    "src": "images/calatoria/24-coperta.jpg"
+  },
+  {
+    "category": "calatoria",
+    "title": "Cartea gata",
+    "width": 1752,
+    "height": 1246,
+    "order": 24,
+    "src": "images/calatoria/25-cartea-gata.jpg"
+  },
+  {
+    "category": "prieteni",
+    "title": "Noah & Luna",
+    "width": 841,
+    "height": 598,
+    "order": 0,
+    "src": "images/prieteni/NoahLuna.jpg"
+  }
+]

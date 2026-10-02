@@ -23,7 +23,7 @@ Reference project: `C:\Misc\storiesofdata.ro\storiesofdata.ro`.
 
 It uses static Astro, npm with a lockfile, TypeScript, a legacy reference archive, focused styles and small interaction modules, local assets, documented migration decisions, Playwright interaction checks, and GitHub Actions for builds and GitHub Pages deployment. Its locale duplication and analytics configuration are specific to Stories of Data and do not apply to this Romanian-only site.
 
-## Recommended migration design (pending review)
+## Approved migration design
 
 Rebuild the three public pages in static Astro. Preserve original artwork, gallery sequence, white canvas, dark selected tab, amber floating controls, captions, About copy, credits, Gumroad destination, and privacy text. Download gallery images into local public assets and record source URLs and dimensions in a data manifest. Keep archived WordPress code outside the deployed output.
 
@@ -41,4 +41,6 @@ Provide canonical metadata, sitemap, robots.txt, favicon, a 404 page, local prev
 
 ## Remaining inspection
 
-Before implementation, verify desktop geometry, tab transitions, image-click behavior, popup dimensions, and the complete privacy-page text. Review the proposed migration design, then write the implementation specification and plan according to the requested reference workflow.
+Confirmed desktop gallery: maximum 1120px, two shortest-height masonry columns, 10px padding per image. Categories stay fixed at the top; selected tab uses #333. Mobile uses one column. Original resizing occasionally overflows; the rebuild corrects this to meet the approved requirement.
+
+Image clicks do not open a lightbox. Hover shows captions and Facebook/Pinterest share controls. Submission popup is approximately 720px wide on desktop, with 48px inputs and a 200px textarea. About has a centered cover image, amber heading/button, and original text; mobile uses alternate cover artwork. Privacy has one illustration and the complete short policy, with no obsolete WordPress clauses. Runtime Google Fonts are replaced by six local TTF files. Reference capture is repeatable with `npm run capture`.

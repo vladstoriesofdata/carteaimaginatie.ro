@@ -1,0 +1,42 @@
+{
+  "despre-proiect": {
+    "blocks": [
+      "<h2>Nati si ImagiNatie</h2>"
+    ],
+    "images": [
+      {
+        "sourceUrl": "https://carteaimaginatie.ro/wp-content/uploads/2022/02/cover-150dpi-1024x395.jpg",
+        "localPath": "images/project/cover-150dpi-1024x395.jpg",
+        "width": 1024,
+        "height": 395
+      },
+      {
+        "sourceUrl": "https://carteaimaginatie.ro/wp-content/uploads/2022/02/Nati-facebook-story-150dpi-scurt-1024x559.jpg",
+        "localPath": "images/project/Nati-facebook-story-150dpi-scurt-1024x559.jpg",
+        "width": 1024,
+        "height": 559
+      }
+    ],
+    "projectParagraphs": [
+      "Nati, protagonista cartii, este surioara mea cu 20 de ani mai mica decat mine. Cartea s-a nascut din surprinderea mea sa vad cum gandeste, simte si se exprima Nati. Pentru mine nu sunt doar niste lucruri traznite pe care le-a spus odata. Am vazut si vad prin ele caracterul surorii mele, curajul, libertatea, increderea, bucuria ce s-au format in ea in familia noastra. Pretuiesc amintirile acestea pentru ca imi amintesc de ea si de noi dar si pentru ca ii arata frumusetea si unicitatea ei.",
+      "ImagiNatie nu este doar o carte, ci si o platforma, acest website, care doreste sa adune astfel de “traznai” de la alti copii. Astfel, imi doresc sa ofer si altor parinti si frati sansa sa surprinda frumusetea si unicitatea copiilor si fratilor mai mici si sa impartaseasca, daca vor, cu comunitatea mai larga.",
+      "Proiectul nu ar fi fost posibil fara efortul si creativitatea ilustratorului, Ina Socol.",
+      "Vlad Mihanta — autorul"
+    ]
+  },
+  "politica-de-confidentialitate": {
+    "blocks": [
+      "<p><span>Politica de confidențialitate</span></p>",
+      "<p>Nu colectăm și nu folosim datele dumneavoastră sau ale copiilor dumneavoastră pentru nici o acțiune de marketing. Singurul lucru pe care îl facem cu informațiile pe care ni le furnizați este să le afișăm pe website în cazul în care sunt aprobate de evaluatori. Nu vom afișa pe website nici o informație<span>, cum ar fi nume, e-mail, poze, profiluri de pe rețele de socializare, etc,</span><span>&nbsp;care ar putea conduce la identificarea dumneavoastră, a copilului dumneavoastră sau a oricărei altă persoană care nu și-a dat acordul în prealabil pentru aceasta.</span></p>"
+    ],
+    "images": [
+      {
+        "sourceUrl": "https://carteaimaginatie.ro/wp-content/uploads/2019/01/0.jpg",
+        "localPath": "images/project/0.jpg",
+        "width": 960,
+        "height": 960
+      }
+    ],
+    "projectParagraphs": []
+  }
+}
