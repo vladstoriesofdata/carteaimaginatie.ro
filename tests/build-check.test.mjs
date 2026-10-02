@@ -37,3 +37,7 @@ test('build check rejects original-site URLs in bundled runtime code',()=>{
   assert.equal(result.status,1);
   assert.match(result.stderr,/original-site runtime/i);
 });
+test('custom-domain metadata does not imply an original-site runtime dependency',()=>{
+  const result=scan('<link rel="canonical" href="https://carteaimaginatie.ro/"><meta property="og:image" content="https://carteaimaginatie.ro/image.svg"><img src="/carteaimaginatie.ro/image.svg">',{'image.svg':'<svg></svg>'});
+  assert.equal(result.status,0,result.stderr);
+});

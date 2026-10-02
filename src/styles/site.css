@@ -19,11 +19,11 @@ a:hover{text-decoration:underline}
 .gallery-controls button{pointer-events:auto;border:0;border-radius:0;background:transparent;color:#444;font-size:13px;line-height:23.4px;letter-spacing:1px;padding:6px 15px;font-weight:400;white-space:nowrap}
 .gallery-controls button[aria-pressed=true]{background:#333;color:#fff}
 .gallery{max-width:1120px;width:calc(100% - 40px);margin:10px auto 0;display:grid;grid-template-columns:1fr 1fr;position:relative}
-.gallery-item{margin:0;padding:10px;position:relative;min-width:0}
+.gallery-item{margin:0;padding:0 10px 20px;position:relative;min-width:0}
 .gallery-item img{display:block;width:100%;height:auto}
 .gallery.is-masonry{display:block}
 .is-masonry .gallery-item{position:absolute}
-.gallery-caption{position:absolute;inset:10px;pointer-events:none;opacity:0;transition:opacity .5s}
+.gallery-caption{position:absolute;inset:0 10px 20px;pointer-events:none;opacity:0;transition:opacity .5s}
 .gallery-item:hover .gallery-caption,.gallery-item:focus-within .gallery-caption{opacity:1}
 .image-title{position:absolute;top:45%;left:0;width:100%;text-align:center;color:#fff;font-size:18px;font-weight:600;text-transform:uppercase}
 .share-links{position:absolute;bottom:10px;right:10px;display:flex;gap:8px;pointer-events:auto}
@@ -31,7 +31,7 @@ a:hover{text-decoration:underline}
 .share-links svg{width:32px;height:32px}
 .share-facebook{background:#0866ff}
 .share-pinterest{background:#e60023}
-.floating-action{position:fixed;right:15px;width:40px;height:36px;z-index:20;overflow:hidden;transition:width .5s;border-radius:5px 0 0 5px;background:#eaac25}
+.floating-action{position:fixed;right:0;width:40px;height:36px;z-index:20;overflow:hidden;transition:width .5s;border-radius:5px 0 0 5px;background:#eaac25}
 .floating-action:hover,.floating-action:focus-within{width:169px}
 .floating-action button,.floating-action a{display:flex;align-items:center;gap:17px;width:169px;height:36px;padding:10px;color:#fff;font:500 15px/15px Roboto,Arial,sans-serif;background:transparent;border:0;white-space:nowrap;text-decoration:none}
 .floating-action svg{flex-shrink:0;width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
@@ -80,7 +80,7 @@ dialog p{margin:0 0 24px}
   .gallery{width:calc(100% - 20px);grid-template-columns:1fr}
   .gallery-controls{gap:6px}
   .gallery-controls button{padding:6px 12px;font-size:12px;letter-spacing:.8px}
-  .floating-action{right:15px}
+  .floating-action{right:0}
   .gumroad-link{right:40px;bottom:35px}
   .project-content{padding:10px 20px}
   .project-cover{width:100%;margin-bottom:24px}

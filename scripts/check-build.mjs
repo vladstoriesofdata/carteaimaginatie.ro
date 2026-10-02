@@ -25,10 +25,12 @@ async function walk(directory) {
     if (entry.isDirectory()) { await walk(file); continue; }
     if (!['.html','.css','.js'].includes(extname(file))) continue;
     const text = await readFile(file,'utf8');
-    if (/https?:\/\/(?:www\.)?carteaimaginatie\.ro(?:\/|["'])/i.test(text)) throw new Error(`Original-site runtime URL in ${relative(root,file)}`);
+    const originalUrl = /https?:\/\/(?:www\.)?carteaimaginatie\.ro(?:\/|["'])/i;
+    if (extname(file)==='.js' && originalUrl.test(text)) throw new Error(`Original-site runtime URL in ${relative(root,file)}`);
     if (/wp-content\/plugins|wp-includes|jquery|ninja-forms|elementor\/assets/i.test(text)) throw new Error(`Legacy runtime in ${relative(root,file)}`);
     if (extname(file)==='.html') {
       const $=cheerio.load(text);
+      for(const script of $('script:not([src])').toArray()) if(originalUrl.test($(script).text())) throw new Error(`Original-site runtime URL in ${relative(root,file)}`);
       for (const element of $('img[src],script[src],source[src],video[src],audio[src],video[poster],link[rel="stylesheet"],link[rel="icon"],link[rel="preload"]').toArray()) {
         const e=$(element);
         await checkResource(e.attr('src') || e.attr('href') || e.attr('poster'),file);
