@@ -1,0 +1,30 @@
+name: Verify static site
+on:
+  pull_request:
+  push:
+    branches: [astro-rebuild]
+  workflow_call:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        base: ["/", "/carteaimaginatie.ro/"]
+        form: ["", "https://forms.example.test/submit"]
+    env:
+      PUBLIC_SITE_URL: https://vladstoriesofdata.github.io
+      PUBLIC_BASE_PATH: ${{ matrix.base }}
+      PUBLIC_FORM_ENDPOINT: ${{ matrix.form }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:build
+      - run: npm run build
+      - run: npm run check:build
+      - run: npm test
