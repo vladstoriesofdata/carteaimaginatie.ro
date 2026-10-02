@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import {sitePath} from '../lib/urls';
+import project from '../data/project.json';
+---
+<BaseLayout title="Despre Proiect – Cartea Imaginație" pageClass="document-page project-page">
+  <main id="content" class="project-content">
+    <picture class="project-cover">
+      <source media="(max-width: 767px)" srcset={sitePath('images/project/Nati-facebook-story-150dpi-scurt-1024x559.jpg')} />
+      <img src={sitePath('images/project/cover-150dpi-1024x395.jpg')} width="1024" height="395" alt="Nati la fereastră — coperta ImagiNatie" />
+    </picture>
+    <div class="project-heading"><h1>Nati si ImagiNatie</h1><a class="gold-button" href={sitePath('')}>Exploreaza ImagiNatie</a></div>
+    <div class="project-story">
+      <p>{project.paragraphs[0]}</p>
+      <p>{project.paragraphs[1]}</p>
+      <p>Proiectul nu ar fi fost posibil fara efortul si creativitatea ilustratorului, <a href="https://www.facebook.com/malvina.socol" target="_blank" rel="noopener noreferrer">Ina Socol</a>.</p>
+      <p>Vlad Mihanta — autorul</p>
+    </div>
+  </main>
+</BaseLayout>

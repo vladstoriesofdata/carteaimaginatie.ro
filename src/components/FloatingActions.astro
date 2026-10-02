@@ -1,0 +1,18 @@
+---
+import { sitePath } from '../lib/urls';
+---
+<div class="floating-action story-action">
+  <button type="button" data-open-story aria-label="Trimite o trăznaie" aria-haspopup="dialog">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 14c1 4 7 4 8 0M8 8h.1M16 8h.1"/></svg>
+    <span>Trimite o trăznaie</span>
+  </button>
+</div>
+<div class="floating-action about-action">
+  <a href={sitePath('despre-proiect/')} aria-label="Despre proiect">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
+    <span>Despre proiect</span>
+  </a>
+</div>
+<a class="gumroad-link" href="https://vladmihanta.gumroad.com/" target="_blank" rel="noopener noreferrer" aria-label="Cartea și susținerea proiectului pe Gumroad">
+  <svg viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="15.5" fill="#ff90e8" stroke="#bf69aa"/><text x="8" y="26" fill="#111" font-family="Arial,sans-serif" font-weight="900" font-size="25">G</text></svg>
+</a>

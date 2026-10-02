@@ -1,0 +1,11 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import {sitePath} from '../lib/urls';
+import privacy from '../data/privacy.json';
+---
+<BaseLayout title="Politica de confidențialitate – Cartea Imaginație" pageClass="document-page privacy-page">
+  <main id="content" class="privacy-content">
+    <img class="privacy-illustration" src={sitePath('images/project/0.jpg')} width="960" height="960" alt="Eu sunt Nati — ilustrație din ImagiNatie" />
+    <div class="privacy-copy"><h1>Politica de confidențialitate</h1><p>{privacy.text}</p><a class="privacy-back" href={sitePath('')}>Înapoi la ImagiNatie</a></div>
+  </main>
+</BaseLayout>

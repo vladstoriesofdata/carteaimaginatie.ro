@@ -1,0 +1,31 @@
+---
+import { sitePath } from '../lib/urls';
+let endpoint = '';
+try {
+  const candidate = new URL(import.meta.env.PUBLIC_FORM_ENDPOINT || '');
+  if (candidate.protocol === 'https:' && !candidate.username && !candidate.password && !/(^|\.)carteaimaginatie\.ro$/i.test(candidate.hostname)) endpoint = candidate.href;
+} catch { /* No endpoint: sending remains unavailable. */ }
+---
+<dialog id="story-dialog" aria-label="Trimite-ne o trăznaie">
+  <button type="button" class="dialog-close" data-close-story aria-label="Închide">×</button>
+  <form id="story-form" data-endpoint={endpoint}>
+    <div class="form-field"><label for="story-name">Nume <span aria-hidden="true">*</span></label><input id="story-name" name="name" type="text" autocomplete="name" required maxlength="200" autofocus /></div>
+    <div class="form-field"><label for="story-email">Email <span aria-hidden="true">*</span></label><input id="story-email" name="email" type="email" autocomplete="email" required maxlength="254" /></div>
+    <div class="form-field"><label for="story-text">Trăznaia <span aria-hidden="true">*</span></label><textarea id="story-text" name="story" required maxlength="10000"></textarea></div>
+    <hr />
+    <div class="illustration-copy">
+      <p>Dorești și ilustrație? Ilustrațiile sunt realizate în stilul celor din carte.</p>
+      <p>O ilustrație costă 12 EUR. Dacă bifezi căsuța de mai jos te vom contacta pentru a discuta detaliile pentru realizarea ilustrației.</p>
+      <p>Dacă trăznaia e potrivită și avem acordul tău o vom afișa pe website (cu sau fără ilustrație)</p>
+    </div>
+    <label class="checkbox-field"><input type="checkbox" name="illustration" /> Vreau și ilustrație</label>
+    <label class="checkbox-field"><input type="checkbox" name="publicationConsent" /> Puteți să afișați trăznaia pe carteaimaginatie.ro</label>
+    <p>Dacă dorești cartea sau vrei să susții proiectul, accesează <a href="https://vladmihanta.gumroad.com/" target="_blank" rel="noopener noreferrer">Gumroad</a></p>
+    <p>Citește <a href={sitePath('politica-de-confidentialitate/')}>politica noastră de confidențialitate.</a></p>
+    <p data-form-status role="status" aria-live="polite">{!endpoint && 'Trimiterea este momentan indisponibilă. Formularul va putea trimite povești după activarea serviciului de mesaje.'}</p>
+    <button type="submit" class="submit-button" disabled={!endpoint}>Trimite</button>
+  </form>
+</dialog>
+<script>
+  import '../scripts/story-dialog';
+</script>

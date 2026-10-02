@@ -1,0 +1,33 @@
+---
+import { sitePath } from '../lib/urls';
+import '../styles/site.css';
+interface Props { title?: string; description?: string; pageClass?: string }
+const {
+  title = 'Cartea Imaginație – O bucățică din lumea copiilor prezentată printr-unul singur',
+  description = 'ImagiNatie: o bucățică din lumea copiilor. Ilustrații și trăznăi din cartea lui Nati, de Vlad Mihanta și Ina Socol.',
+  pageClass = '',
+} = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const shareImage = new URL(sitePath('images/project/cover-150dpi-1024x395.jpg'), Astro.site);
+---
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href={sitePath('favicon.svg')} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={shareImage} />
+    <meta name="theme-color" content="#eaac25" />
+  </head>
+  <body class={pageClass}>
+    <a class="skip-link" href="#content">Sari la conținut</a>
+    <slot />
+  </body>
+</html>
