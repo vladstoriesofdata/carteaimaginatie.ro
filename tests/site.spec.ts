@@ -1,5 +1,25 @@
 import { test, expect } from '@playwright/test';
 
+test('gallery images flow left to right in sequence after filtering and resizing', async ({page})=>{
+  await page.goto('./');
+  for (const width of [1440,375,768]) {
+    await page.setViewportSize({width,height:900});
+    for (const category of ['CALATORIA','DIN CARTE','PRIETENI']) {
+      await page.getByRole('button',{name:category,exact:true}).click();
+      await expect(page.locator('#gallery')).toHaveClass(/is-masonry/);
+      const positions = await page.locator('.gallery-item:visible').evaluateAll(items =>
+        items.map(item => ({left:(item as HTMLElement).offsetLeft,top:(item as HTMLElement).offsetTop}))
+      );
+      for (let i=0;i<positions.length;i++) {
+        const column = width<=767 ? 0 : i%2;
+        expect(positions[i].left,`${category} image ${i+1} at ${width}px`).toBe(column ? positions[1].left : positions[0].left);
+        if (i >= (width<=767 ? 1 : 2)) expect(positions[i].top).toBeGreaterThan(positions[i-(width<=767 ? 1 : 2)].top);
+      }
+      if (width>767 && positions.length>1) expect(positions[1].left).toBeGreaterThan(positions[0].left);
+    }
+  }
+});
+
 test('homepage renders the original journey with local assets', async ({page})=>{
   await page.goto('./');
   await expect(page.locator('html')).toHaveAttribute('lang','ro');

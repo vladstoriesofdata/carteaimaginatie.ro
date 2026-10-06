@@ -7,9 +7,9 @@ function layoutGallery() {
   const columns = window.matchMedia('(max-width: 767px)').matches ? 1 : 2;
   const width = gallery.clientWidth / columns;
   const heights = Array(columns).fill(0);
-  for (const item of items.filter(item => !item.hidden)) {
+  for (const [index, item] of items.filter(item => !item.hidden).entries()) {
     const image = item.querySelector<HTMLImageElement>('img')!;
-    const column = heights.indexOf(Math.min(...heights));
+    const column = index % columns;
     item.style.width = `${width}px`;
     item.style.left = `${column * width}px`;
     item.style.top = `${heights[column]}px`;
