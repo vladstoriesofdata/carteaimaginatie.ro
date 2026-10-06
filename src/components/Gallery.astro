@@ -13,7 +13,6 @@ const canonical = new URL(sitePath(''), Astro.site).href;
       <figure class="gallery-item" data-category={image.category} hidden={category.id !== 'calatoria'}>
         <img src={sitePath(image.src)} width={image.width} height={image.height} alt={`${image.title} — ilustrație din ImagiNatie`} loading={image.category === 'calatoria' && image.order < 2 ? 'eager' : 'lazy'} decoding="async" />
         <figcaption class="gallery-caption">
-          <span class="image-title">{image.title}</span>
           <div class="share-links" aria-label={`Distribuie ${image.title}`}>
             <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(canonical)}`} target="_blank" rel="noopener noreferrer" aria-label={`Distribuie ${image.title} pe Facebook`} class="share-facebook"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M19 32V19h4l1-5h-5v-3c0-1.5.6-2 2-2h3V4h-4c-4 0-7 2.5-7 7v3H9v5h4v13z"/></svg></a>
             <a href={`https://pinterest.com/pin/create/button/?url=${encodeURIComponent(canonical)}&media=${encodeURIComponent(new URL(sitePath(image.src), Astro.site).href)}&description=${encodeURIComponent(image.title)}`} target="_blank" rel="noopener noreferrer" aria-label={`Distribuie ${image.title} pe Pinterest`} class="share-pinterest"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 2a14 14 0 0 0-5 27l3-12c-1-2-1-5 1-5 4-1 1 6 1 8 1 3 7 1 7-5 0-8-12-8-13-1 0 3 2 3 2 5-3 1-5-3-5-6 0-11 19-13 19 0 0 8-8 12-12 7l-2 9 4 1a14 14 0 0 0 0-28z"/></svg></a>

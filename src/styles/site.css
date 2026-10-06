@@ -25,7 +25,6 @@ a:hover{text-decoration:underline}
 .is-masonry .gallery-item{position:absolute}
 .gallery-caption{position:absolute;inset:0 10px 20px;pointer-events:none;opacity:0;transition:opacity .5s}
 .gallery-item:hover .gallery-caption,.gallery-item:focus-within .gallery-caption{opacity:1}
-.image-title{position:absolute;top:45%;left:0;width:100%;text-align:center;color:#fff;font-size:18px;font-weight:600;text-transform:uppercase}
 .share-links{position:absolute;bottom:10px;right:10px;display:flex;gap:8px;pointer-events:auto}
 .share-links a{width:32px;height:32px;border-radius:4px;color:#fff;display:block}
 .share-links svg{width:32px;height:32px}
