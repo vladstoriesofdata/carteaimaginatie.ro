@@ -93,7 +93,7 @@ Review the preserved **12 EUR illustration price** before activating submissions
 ## Reference and structure
 
 - `src/`: native Astro pages, components, scripts, focused CSS and gallery data.
-- `public/`: 34 original gallery illustrations, three document illustrations, local fonts, SVG favicon and `.nojekyll`.
+- `public/`: 34 original gallery illustrations, three document illustrations, local fonts, original JPEG favicon and `.nojekyll`.
 - `legacy/`: original HTML/CSS, source provenance and repeatable capture manifests, for inspection only.
 - `docs/superpowers/`: approved specification and implementation plan.
 - `tests/`: browser checks and build-scanner fixtures.

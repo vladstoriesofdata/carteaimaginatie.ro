@@ -6,8 +6,9 @@ test('static metadata and machine-readable routes honor the deployment base',asy
   await page.goto('./');
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href',new URL(base,site).href);
   const favicon=page.locator('link[rel="icon"]');
-  await expect(favicon).toHaveAttribute('href',`${base}favicon.svg`);
-  expect((await request.get(new URL('favicon.svg',baseURL!).href)).status()).toBe(200);
+  await expect(favicon).toHaveAttribute('href',`${base}favicon.jpg`);
+  await expect(favicon).toHaveAttribute('type','image/jpeg');
+  expect((await request.get(new URL('favicon.jpg',baseURL!).href)).status()).toBe(200);
   const robots=await request.get('robots.txt');
   expect(robots.status()).toBe(200);
   expect(await robots.text()).toContain(new URL(`${base}sitemap-index.xml`,site).href);
