@@ -1,14 +1,14 @@
 ---
 import { sitePath } from '../lib/urls';
-let endpoint = '';
-try {
-  const candidate = new URL(import.meta.env.PUBLIC_FORM_ENDPOINT || '');
-  if (candidate.protocol === 'https:' && !candidate.username && !candidate.password && !/(^|\.)carteaimaginatie\.ro$/i.test(candidate.hostname)) endpoint = candidate.href;
-} catch { /* No endpoint: sending remains unavailable. */ }
+const accessKey = (import.meta.env.PUBLIC_WEB3FORMS_ACCESS_KEY || '').trim();
+const endpoint = accessKey ? 'https://api.web3forms.com/submit' : '';
 ---
 <dialog id="story-dialog" aria-label="Trimite-ne o trăznaie">
   <button type="button" class="dialog-close" data-close-story aria-label="Închide">×</button>
   <form id="story-form" data-endpoint={endpoint}>
+    <input type="hidden" name="access_key" value={accessKey} />
+    <input type="hidden" name="subject" value="O trăznaie nouă — Cartea Imaginație" />
+    <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
     <div class="form-field"><label for="story-name">Nume <span aria-hidden="true">*</span></label><input id="story-name" name="name" type="text" autocomplete="name" required maxlength="200" autofocus /></div>
     <div class="form-field"><label for="story-email">Email <span aria-hidden="true">*</span></label><input id="story-email" name="email" type="email" autocomplete="email" required maxlength="254" /></div>
     <div class="form-field"><label for="story-text">Trăznaia <span aria-hidden="true">*</span></label><textarea id="story-text" name="story" required maxlength="10000"></textarea></div>

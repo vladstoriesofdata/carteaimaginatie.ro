@@ -11,11 +11,11 @@ jobs:
       fail-fast: false
       matrix:
         base: ["/", "/carteaimaginatie.ro/"]
-        form: ["", "https://forms.example.test/submit"]
+        form: ["", "00000000-0000-4000-8000-000000000000"]
     env:
       PUBLIC_SITE_URL: https://vladstoriesofdata.github.io
       PUBLIC_BASE_PATH: ${{ matrix.base }}
-      PUBLIC_FORM_ENDPOINT: ${{ matrix.form }}
+      PUBLIC_WEB3FORMS_ACCESS_KEY: ${{ matrix.form }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

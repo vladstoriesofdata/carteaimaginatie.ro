@@ -19,6 +19,10 @@ if (dialog && form && trigger) {
     const endpoint = form.dataset.endpoint;
     if (!endpoint || sending || !form.reportValidity()) return;
     const data = new FormData(form);
+    if (data.has('botcheck')) {
+      status.textContent = 'Mesajul nu a putut fi trimis. Trăznaia ta este păstrată în formular; încearcă din nou.';
+      return;
+    }
     const name = String(data.get('name') || '').trim();
     const story = String(data.get('story') || '').trim();
     if (!name || !story) {
@@ -32,11 +36,13 @@ if (dialog && form && trigger) {
     try {
       const response = await fetch(endpoint, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email: String(data.get('email')).trim(), story, illustration: data.has('illustration'), publicationConsent: data.has('publicationConsent') }),
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ access_key: String(data.get('access_key')), subject: String(data.get('subject')), botcheck: false, name, email: String(data.get('email')).trim(), story, illustration: data.has('illustration'), publicationConsent: data.has('publicationConsent') }),
         signal: AbortSignal.timeout(15000),
       });
       if (!response.ok) throw new Error('Submission failed');
+      const result = await response.json();
+      if (result.success !== true) throw new Error('Submission rejected');
       status.textContent = 'Am primit trăznaia ta. Mulțumim!';
       form.reset();
     } catch {
